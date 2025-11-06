@@ -12,6 +12,7 @@ namespace OOPS
     {
         internal class Myclass
         {
+            internal int x;
             internal void Add()
             {
                 int a = 10;
@@ -22,6 +23,12 @@ namespace OOPS
             internal void Display()
             {
                 Console.WriteLine("Welcome");
+                Console.WriteLine(x);
+            }
+            internal void sum(int a, int b)
+            {
+                int c = a + b;
+                Console.WriteLine("sum is: " + c);
             }
         }
         static void Main(string[] args)
@@ -30,9 +37,11 @@ namespace OOPS
             obj.Add();
             Console.WriteLine("Hello World!");
             obj.Add();
-            obj.Display();
             Console.WriteLine("Hiii");
             obj.Add();
+            obj.x = 100;
+            obj.Display();
+            obj.sum(100, 200);
             Console.ReadLine();
         }
     }
